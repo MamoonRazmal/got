@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.char_font {
+  font-size: small;
+}
+
+.splide__slide img {
+  width: 100%;
+  height: auto;
+}
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+.char_col {
+  padding: 10px;
+  width: 10%;
+}
+.main_direction {
+  /* position: relative;
+  display: flex;
+  flex-direction: row; */
+}
+.row {
+  margin: 0 -5px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.cards {
+  /* display: block;
+  width: 100vh;
+  position: absolute;
+
+  height: 80vh; */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+.main_image {
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: linear-gradient(
+      to right bottom,
+      rgba(138, 189, 50, 0.8),
+      rgba(189, 50, 50, 0.8)
+    ),
+    url(../src/assets/325117.jpg) center center/cover no-repeat;
+}
+
+/* background-image: url(../src/assets/325117.jpg); */
+
+/* font-family: 'Poppins', sans-serif; */
+/* font-family: 'Playfair Display', serif; */
+
+/* //navbar css */
+.navbar {
+  font-family: "Poppins", sans-serif;
+
+  font-size: 17px;
+  line-height: 26px;
+  text-transform: uppercase;
+  box-shadow: 0 8px 6px -6px gray;
+  --webkit-box-shadow: 0 8px 6px -6px gray;
+  border-bottom: solid gray !important;
+}
+
+.nav-link {
+  font-weight: 300 !important;
+}
+
+.active {
+  border-bottom: 2px solid black;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-family: "roboto", sans-serif;
+  letter-spacing: 3px;
+}
+
+.search-form {
+  margin-right: 10px;
+  margin-top: 4px;
+}
+.search-form input {
+  border: none;
+  border-radius: 0;
+}
+.search-form button {
+  background-color: #000000;
+  border-radius: 0;
+  color: white;
+}
