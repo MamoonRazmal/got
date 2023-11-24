@@ -19,14 +19,14 @@ export default function Home() {
               <div className="card_home_img_character"></div>
               <div className="card_home_title_character"> </div>
             </div>
-            Character
+            Characters
           </NavLink>
           <NavLink to="/houses" className="nav-links nav-link">
             <div className="card_home_qoutes">
               <div className="card_home_img_qoutes"></div>
               <div className="card_home_title_qoutes"> </div>
             </div>
-            Best Qoute
+            Best Qoutes
           </NavLink>
         </div>
       </div>
