@@ -26,12 +26,16 @@ export default function Housedetails() {
 
   return (
     <>
-      {house.map((member) => (
-        <h1 key={member.name}>{member.name}</h1>
-        // member.members.map((w)=>(
-        //     <h2>{w.name}</h2>
-        // ))
-      ))}
+      <div className="housedetail_main_card ">
+        <h1>Member of House</h1>
+        {house.map((member) => (
+          <p key={member.name}>{member.name}</p>
+
+          // member.members.map((w)=>(
+          //     <h2>{w.name}</h2>
+          // ))
+        ))}
+      </div>
     </>
   );
 }

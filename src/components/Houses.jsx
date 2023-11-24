@@ -24,20 +24,19 @@ export default function Houses() {
   }, []);
 
   return (
-    <div className="main_image main_direction">
-      <h1>Houses</h1>
+    <div className="main_image  ">
       <div className="row">
         {categories.map((e) => (
           <>
             <div className="column">
-              <div className="cards">
+              <div className="cards m-3">
                 <h5 className="card-titles">{e.name}</h5>
                 <p className="card-texts">{e.slug}</p>
                 <button
-                  className="btn btn-info ms-1"
+                  className="btn btn-info ms-1 pt-1 mthouse "
                   onClick={() => navigate(`/housedetails/${e.slug}`)}
                 >
-                  get
+                  Details
                 </button>
               </div>
               {/* </div> */}

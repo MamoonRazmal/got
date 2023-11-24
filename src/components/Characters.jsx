@@ -10,7 +10,7 @@ export default function Characters() {
       const { data } = await axios.get(
         "https://api.gameofthronesquotes.xyz/v1/characters"
       );
-      console.log("data game of throne", data);
+      console.log("data game of thrones", data);
       setCategories(data);
     } catch (error) {
       console.log(error);
@@ -23,20 +23,21 @@ export default function Characters() {
   }, []);
 
   return (
-    <div className="main_image main_direction">
-      <h1>Characters</h1>
-      <div className="row char_font">
+    <div className="main_image main_direction ">
+      <div className="row char_font mt-3">
         {categories.map((e) => (
           <>
             <div className="column char_col">
-              <div className="cards">
-                <h5 className="card-titles">{e.name}</h5>
-                <p className="card-texts">{e.slug}</p>
+              <div className="cards  m-2">
+                <h5 className="card-titles char_title">{e.name}</h5>
+                <p className="card-texts ">{e.slug}</p>
+                {e.house ? <p>{e.house.name}</p> : "No House"}
+                {/* <p className="card-texts ">{e?.house?.name}</p> */}
                 <button
-                  className="btn btn-info ms-1"
+                  className="btn btn-info p-2 mt-3   mtext"
                   onClick={() => navigate(`/character/${e.slug}`)}
                 >
-                  get
+                  More Details
                 </button>
               </div>
               {/* </div> */}
