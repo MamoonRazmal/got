@@ -4,7 +4,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+.qr {
+  margin-bottom: 20px;
+}
 .card_home {
   display: flex;
   align-items: center;

@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 export default function Characters() {
   const navigate = useNavigate();
   const [categories, setCategories] = useState([]);
-  const getallCategory = async () => {
+  const getallChars = async () => {
     try {
       const { data } = await axios.get(
         "https://api.gameofthronesquotes.xyz/v1/characters"
@@ -18,7 +18,7 @@ export default function Characters() {
   };
 
   useEffect(() => {
-    getallCategory();
+    getallChars();
     // getTotal();
   }, []);
 

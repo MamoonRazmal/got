@@ -6,7 +6,7 @@ export default function Qoutes() {
   const navigate = useNavigate();
   const [update, setUpdate] = useState(1);
   const [categories, setCategories] = useState([]);
-  const getallCategory = async () => {
+  const getallRanQou = async () => {
     try {
       const { data } = await axios.get(
         "https://api.gameofthronesquotes.xyz/v1/random/5"
@@ -19,13 +19,13 @@ export default function Qoutes() {
   };
 
   useEffect(() => {
-    getallCategory();
+    getallRanQou();
     // getTotal();
   }, [update]);
 
   return (
     <div className="main_image ">
-      <h1>Random Qoutes by Game of throne</h1>
+      <h1 className="qr">Random Qoutes by Game of throne</h1>
       <div className="main_card">
         {categories.map((e) => (
           <>
@@ -41,6 +41,7 @@ export default function Qoutes() {
         ))}
       </div>
       <button
+        className="qoute_btn"
         onClick={() => {
           console.log("updated vate", update);
           setUpdate(update + 1);

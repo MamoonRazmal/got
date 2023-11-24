@@ -9,11 +9,11 @@ export default function Charsdetails() {
 
   useEffect(() => {
     if (params?.slug) {
-      getProduct();
+      getChar();
     }
   }, [params?.slug]);
 
-  const getProduct = async () => {
+  const getChar = async () => {
     try {
       const { data } = await axios.get(
         `https://api.gameofthronesquotes.xyz/v1/character/${params.slug}`

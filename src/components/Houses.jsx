@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 export default function Houses() {
   const navigate = useNavigate();
   const [categories, setCategories] = useState([]);
-  const getallCategory = async () => {
+  const getHouses = async () => {
     try {
       const { data } = await axios.get(
         "https://api.gameofthronesquotes.xyz/v1/houses"
@@ -19,7 +19,7 @@ export default function Houses() {
   };
 
   useEffect(() => {
-    getallCategory();
+    getHouses();
     // getTotal();
   }, []);
 

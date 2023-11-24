@@ -8,11 +8,11 @@ export default function Housedetails() {
 
   useEffect(() => {
     if (params?.slug) {
-      getProduct();
+      getHouse();
     }
   }, [params?.slug]);
 
-  const getProduct = async () => {
+  const getHouse = async () => {
     try {
       const { data } = await axios.get(
         `https://api.gameofthronesquotes.xyz/v1/house/${params.slug}`
